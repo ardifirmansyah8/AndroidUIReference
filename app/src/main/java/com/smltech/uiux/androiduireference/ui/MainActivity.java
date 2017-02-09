@@ -34,25 +34,53 @@ public class MainActivity extends AppCompatActivity {
         addMenu();
         initRecyclerView();
         loadMenu();
-
     }
 
+    /**
+     * Methode untuk inisiasi recyclerview
+     */
     private void initRecyclerView(){
         llManager = new LinearLayoutManager(this);
         llManager.setOrientation(LinearLayoutManager.VERTICAL);
         rvMainMenu.setLayoutManager(llManager);
     }
 
+    /**
+     * Methode untuk menampilkan menu yang sudah di tambahkan ke recyclerview
+     * Dan untuk menghandle action klik pada menu yang ditampilkan
+     */
     private void loadMenu(){
         adapter = new MainMenuAdapter(list, new RowCallback() {
             @Override
             public void onRowClick(String menuName) {
-                Toast.makeText(MainActivity.this, menuName, Toast.LENGTH_SHORT).show();
+                switch (menuName){
+                    case "RecyclerView":
+                        //Lakukan Action disini
+                        break;
+                    case "Toolbar":
+                        //Lakukan Action disini
+                        break;
+                    case "Material Tabs":
+                        //Lakukan Action disini
+                        break;
+                    case "Material Dialogs":
+                        //Lakukan Action disini
+                        break;
+                    case "Floating Action Button":
+                        //Lakukan Action disini
+                        break;
+                    default:
+                        break;
+                }
+
             }
         });
         rvMainMenu.setAdapter(adapter);
     }
 
+    /**
+     * Methode untuk menambahkan menu pada recyclerview
+     */
     private void addMenu(){
         list = new ArrayList<MenuUtamaBean>();
         for (int i = 0; i < DataDumyActivity.mainMenu.length; i++){
