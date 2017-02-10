@@ -9,5 +9,6 @@ public class DataDumyActivity {
     static String[] mainMenu = {"RecyclerView",
             "Toolbar",
             "Material Tabs",
-            "Material Dialogs"};
+            "Material Dialogs",
+    "Floating Action Button"};
 }
