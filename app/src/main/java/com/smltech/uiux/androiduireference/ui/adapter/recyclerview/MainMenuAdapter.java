@@ -39,6 +39,7 @@ public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuAdapter.MainMe
         return holder;
     }
 
+
     @Override
     public void onBindViewHolder(MainMenuAdapter.MainMenuHolder holder, final int position) {
         holder.tvMenuName.setText(dataSet.get(position).getMenuName());

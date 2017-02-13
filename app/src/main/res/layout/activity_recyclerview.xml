@@ -9,6 +9,14 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.smltech.uiux.androiduireference.ui.RecyclerViewActivity">
+    tools:context="com.smltech.uiux.androiduireference.ui.Activity.RecyclerViewActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_main"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:scrollbars="vertical"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
 
 </RelativeLayout>

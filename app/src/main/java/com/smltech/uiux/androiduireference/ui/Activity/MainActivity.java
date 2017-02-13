@@ -1,5 +1,6 @@
-package com.smltech.uiux.androiduireference.ui;
+package com.smltech.uiux.androiduireference.ui.Activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -11,7 +12,6 @@ import com.smltech.uiux.androiduireference.data.bean.MenuUtamaBean;
 import com.smltech.uiux.androiduireference.service.RowCallback;
 import com.smltech.uiux.androiduireference.ui.adapter.recyclerview.MainMenuAdapter;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 
 import butterknife.BindView;
@@ -48,6 +48,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onRowClick(String menuName) {
                 Toast.makeText(MainActivity.this, menuName, Toast.LENGTH_SHORT).show();
+
+                switch (menuName) {
+                    case "RecyclerView":
+                        Intent pilihanbutton = new Intent(MainActivity.this,RecyclerViewActivity.class);
+                        startActivity(pilihanbutton);
+                        break;
+                }
+
             }
         });
         rvMainMenu.setAdapter(adapter);
