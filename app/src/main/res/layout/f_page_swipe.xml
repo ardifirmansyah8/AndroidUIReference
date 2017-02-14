@@ -4,14 +4,6 @@
     android:layout_height="match_parent">
 
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="@drawable/swipe"
-        android:id="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
-
 
     <Button
         android:text="Swipleable (Vertical)"
