@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(pilihanbutton);
                         break;
                 }
+                Toast.makeText(MainActivity.this, menuName, Toast.LENGTH_SHORT).show();
 
             }
         });
