@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mt_category1"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:text="Rigotte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/rigotte"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Anneau de Vic-Blih"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rigotte"
+        android:layout_alignParentStart="true"
+        android:id="@+id/anneau"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Frying Cheese"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/anneau"
+        android:layout_alignParentStart="true"
+        android:id="@+id/frying"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Bleu de Laqueuille"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/frying"
+        android:layout_alignParentStart="true"
+        android:id="@+id/bleu"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Folded cheese with mint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bleu"
+        android:layout_alignParentStart="true"
+        android:id="@+id/folded"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Serat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/folded"
+        android:layout_alignParentStart="true"
+        android:id="@+id/serat"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Lebbene"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/serat"
+        android:layout_alignParentStart="true"
+        android:id="@+id/lebbene"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Leicester"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/leicester"
+        android:layout_below="@+id/lebbene"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Caciotta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/leicester"
+        android:layout_alignParentStart="true"
+        android:id="@+id/caciotta"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Limburger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/limburger"
+        android:layout_below="@+id/caciotta"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>

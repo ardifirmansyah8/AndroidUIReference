@@ -1,4 +1,4 @@
-package com.smltech.uiux.androiduireference.ui;
+package com.smltech.uiux.androiduireference.ui.Activity;
 
 /**
  * Created by ryanzulham on 1/1/17.

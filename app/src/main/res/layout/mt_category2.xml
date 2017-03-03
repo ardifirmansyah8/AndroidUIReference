@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mt_category2"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <Button
+        android:text="Montasio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/montasio" />
+
+    <Button
+        android:text="Danbo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/danbo"
+        android:layout_below="@+id/tilsit"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Venaco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/venaco"
+        android:layout_below="@+id/montasio"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Tilsit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tilsit"
+        android:layout_below="@+id/venaco"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Yarra Valley Pyramid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/yarra"
+        android:layout_below="@+id/danbo"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Bergere Bleue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bergere"
+        android:layout_below="@+id/yarra"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Port Nicholson"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/port"
+        android:layout_below="@+id/bergere"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Cheddar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cheddar"
+        android:layout_below="@+id/port"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Tyn Grug"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tyn"
+        android:layout_below="@+id/cheddar"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Flower Marie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/flower"
+        android:layout_below="@+id/tyn"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

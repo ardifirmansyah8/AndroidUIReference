@@ -7,7 +7,7 @@
     android:fitsSystemWindows="true"
     android:background="@color/backgroundBlack"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.smltech.uiux.androiduireference.ui.MainActivity">
+    tools:context="com.smltech.uiux.androiduireference.ui.Activity.MainActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/abMainMenu"
