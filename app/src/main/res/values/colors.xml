@@ -8,4 +8,5 @@
     <color name="colorAccent">#c8e8ff</color>
     <color name="backgroundBlack">#2B3139</color>
     <color name="hijau">#4caf50</color>
+    <color name="transparan">#99000000</color>
 </resources>

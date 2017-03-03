@@ -10,11 +10,12 @@ import android.widget.Toast;
 import com.smltech.uiux.androiduireference.R;
 import com.smltech.uiux.androiduireference.data.bean.MenuUtamaBean;
 import com.smltech.uiux.androiduireference.service.RowCallback;
+import com.smltech.uiux.androiduireference.ui.Activity.MaterialTabs.MaterialTabsActivity;
 import com.smltech.uiux.androiduireference.ui.adapter.recyclerview.MainMenuAdapter;
 
 import java.util.ArrayList;
 
-import butterknife.BindView;
+import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<MenuUtamaBean> list;
     private LinearLayoutManager llManager;
 
-    @BindView(R.id.rvMainMenu)
+    @Bind(R.id.rvMainMenu)
     RecyclerView rvMainMenu;
 
     @Override
@@ -53,6 +54,10 @@ public class MainActivity extends AppCompatActivity {
                     case "RecyclerView":
                         Intent pilihanbutton = new Intent(MainActivity.this,RecyclerViewActivity.class);
                         startActivity(pilihanbutton);
+                        break;
+                    case "Material Tabs":
+                        Intent pilihanbutton1 = new Intent(MainActivity.this, MaterialTabsActivity.class);
+                        startActivity(pilihanbutton1);
                         break;
                 }
                 Toast.makeText(MainActivity.this, menuName, Toast.LENGTH_SHORT).show();

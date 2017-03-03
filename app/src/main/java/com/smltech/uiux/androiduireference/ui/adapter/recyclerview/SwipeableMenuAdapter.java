@@ -9,40 +9,39 @@ import android.widget.TextView;
 
 import com.smltech.uiux.androiduireference.R;
 import com.smltech.uiux.androiduireference.data.bean.MenuUtamaBean;
+import com.smltech.uiux.androiduireference.service.ItemTouchHelperAdapter;
+import com.smltech.uiux.androiduireference.service.OnStartSwipeListener;
 import com.smltech.uiux.androiduireference.service.RowCallback;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
- * Created by ryanzulham on 12/31/16.
+ * Created by Fauziah on 2/16/2017.
  */
 
-public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuAdapter.MainMenuHolder>{
-
+public class SwipeableMenuAdapter extends RecyclerView.Adapter<SwipeableMenuAdapter.SwipeableMenuHolder> {
     private ArrayList<MenuUtamaBean> dataSet;
     private RowCallback rowCallback;
-
-
-    public MainMenuAdapter(ArrayList<MenuUtamaBean> dataSet, RowCallback rowCallback) {
+    public SwipeableMenuAdapter(ArrayList<MenuUtamaBean> dataSet, RowCallback rowCallback){
         this.dataSet = dataSet;
         this.rowCallback = rowCallback;
     }
 
     @Override
-    public MainMenuHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_main, parent, false);
-        MainMenuHolder holder = new MainMenuHolder(itemView);
+    public SwipeableMenuHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.rv_row_swipe, parent, false);
+        SwipeableMenuHolder holder = new SwipeableMenuHolder(itemView);
         return holder;
     }
 
-
     @Override
-    public void onBindViewHolder(MainMenuAdapter.MainMenuHolder holder, final int position) {
-        holder.tvMenuName.setText(dataSet.get(position).getMenuName());
+    public void onBindViewHolder(SwipeableMenuAdapter. SwipeableMenuHolder holder, final int position) {
+        holder.tvMenuSwipeName.setText(dataSet.get(position).getMenuName());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,13 +57,12 @@ public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuAdapter.MainMe
         return dataSet.size();
     }
 
-    public class MainMenuHolder extends RecyclerView.ViewHolder {
-        @Bind(R.id.tvMenuName)
-        TextView tvMenuName;
+    public class SwipeableMenuHolder extends RecyclerView.ViewHolder{
+        @Bind(R.id.tvMenuSwipeName)
+        TextView tvMenuSwipeName;
 
-        public MainMenuHolder(View itemView) {
+        public SwipeableMenuHolder(View itemView){
             super(itemView);
             ButterKnife.bind(this, itemView);
-        }
+        }}
     }
-}
