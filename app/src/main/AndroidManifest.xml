@@ -21,6 +21,10 @@
         <activity android:name=".ui.Activity.RecyclerViewActivity">
 
         </activity>
+
+        <activity android:name=".ui.Activity.MaterialTabs.MaterialTabsActivity">
+
+        </activity>
     </application>
 
 </manifest>

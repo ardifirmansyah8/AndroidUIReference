@@ -13,5 +13,7 @@
     <!--RADIUS-->
     <dimen name="radius">4dp</dimen>
     <dimen name="radius_menu">145dp</dimen>
+    <dimen name="margin_double">16dp</dimen>
+    <dimen name="margin">10dp</dimen>
 
 </resources>

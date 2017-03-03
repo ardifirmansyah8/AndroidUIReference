@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tvMenuSwipeName" type="id" />
+    <item name="rvSwipeable" type="id" />
+    <item name="rvSwipeOnLongPress" type="id" />
+    <item name="tabRecycleview" type="id" />
+    <item name="vpRecycleview" type="id" />
+    <item name="fr_materialtabs" type="id" />
+    <item name="tabMaterialtabs" type="id" />
+    <item name="vpMaterialtabs" type="id" />
+    <item name="rvC1" type="id" />
+    <item name="rvCa" type="id" />
+    <item name="tvMenuMaterialTabsName" type="id" />
+    <item name="rvMaterialTabs" type="id" />
+</resources>
