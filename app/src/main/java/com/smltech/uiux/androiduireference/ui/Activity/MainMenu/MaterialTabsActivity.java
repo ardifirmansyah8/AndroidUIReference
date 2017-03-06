@@ -1,4 +1,4 @@
-package com.smltech.uiux.androiduireference.ui.Activity.MaterialTabs;
+package com.smltech.uiux.androiduireference.ui.Activity.MainMenu;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

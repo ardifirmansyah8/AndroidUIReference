@@ -12,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.smltech.uiux.androiduireference.R;
-import com.smltech.uiux.androiduireference.ui.Activity.MaterialTabs.MaterialTabsAdapter;
+import com.smltech.uiux.androiduireference.ui.adapter.MaterialTabs.MaterialTabsAdapter;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;

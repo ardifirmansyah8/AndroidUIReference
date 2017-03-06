@@ -1,24 +1,18 @@
 package com.smltech.uiux.androiduireference.ui.fragment;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.*;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.smltech.uiux.androiduireference.R;
 import com.smltech.uiux.androiduireference.data.bean.MenuUtamaBean;
-import com.smltech.uiux.androiduireference.service.RowCallback;
-import com.smltech.uiux.androiduireference.ui.Activity.DataDumyActivity;
-import com.smltech.uiux.androiduireference.ui.Activity.MaterialTabs.MaterialTabsAdapter;
+import com.smltech.uiux.androiduireference.ui.adapter.MaterialTabs.MaterialTabsAdapter;
 
 import java.util.ArrayList;
 
-import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
@@ -63,8 +57,8 @@ public class PageMaterialTabs extends Fragment {
     }
     private void addMenu(){
         list = new ArrayList<MenuUtamaBean>();
-        for (int i =0; i< DataDumyActivity.materialTabsMenu.length; i++){
-            list.add(new MenuUtamaBean(DataDumyActivity.materialTabsMenu[i]));
+        for (int i =0; i< DataDumy.materialTabsMenu.length; i++){
+            list.add(new MenuUtamaBean(DataDumy.materialTabsMenu[i]));
         }
     }
 */

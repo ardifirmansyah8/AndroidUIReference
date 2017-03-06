@@ -1,4 +1,4 @@
-package com.smltech.uiux.androiduireference.ui.adapter.recyclerview;
+package com.smltech.uiux.androiduireference.ui.adapter.Recyclerview.Swipe;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -16,52 +16,48 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
- * Created by Fauziah on 2/21/2017.
+ * Created by Fauziah on 2/16/2017.
  */
 
-public class SwipeOnLongPressMenuAdapter extends RecyclerView.Adapter<SwipeOnLongPressMenuAdapter.SwipeOnLongPressHolder> {
+public class SwipeableMenuAdapter extends RecyclerView.Adapter<SwipeableMenuAdapter.SwipeableMenuHolder> {
     private ArrayList<MenuUtamaBean> dataSet;
     private RowCallback rowCallback;
-
-    public SwipeOnLongPressMenuAdapter(ArrayList<MenuUtamaBean> dataSet, RowCallback rowCallback) {
+    public SwipeableMenuAdapter(ArrayList<MenuUtamaBean> dataSet, RowCallback rowCallback){
         this.dataSet = dataSet;
         this.rowCallback = rowCallback;
     }
 
     @Override
-    public SwipeOnLongPressMenuAdapter.SwipeOnLongPressHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.rv_row_swipe_on_long, parent, false);
-        SwipeOnLongPressMenuAdapter.SwipeOnLongPressHolder holder =
-                new SwipeOnLongPressMenuAdapter.SwipeOnLongPressHolder(itemView);
+    public SwipeableMenuHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.rv_row_swipe, parent, false);
+        SwipeableMenuHolder holder = new SwipeableMenuHolder(itemView);
         return holder;
     }
 
     @Override
-    public void onBindViewHolder(SwipeOnLongPressMenuAdapter.SwipeOnLongPressHolder holder, final int position) {
+    public void onBindViewHolder(SwipeableMenuAdapter. SwipeableMenuHolder holder, final int position) {
         holder.tvMenuSwipeName.setText(dataSet.get(position).getMenuName());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (rowCallback != null) {
+                if (rowCallback != null){
                     rowCallback.onRowClick(dataSet.get(position).getMenuName());
                 }
             }
         });
     }
 
-
     @Override
     public int getItemCount() {
         return dataSet.size();
     }
 
-    public class SwipeOnLongPressHolder extends RecyclerView.ViewHolder {
+    public class SwipeableMenuHolder extends RecyclerView.ViewHolder{
         @Bind(R.id.tvMenuSwipeName)
         TextView tvMenuSwipeName;
 
-        public SwipeOnLongPressHolder(View itemView) {
+        public SwipeableMenuHolder(View itemView){
             super(itemView);
             ButterKnife.bind(this, itemView);
-        }
+        }}
     }
-}

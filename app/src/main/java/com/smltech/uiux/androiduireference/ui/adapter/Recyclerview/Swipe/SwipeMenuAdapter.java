@@ -1,4 +1,4 @@
-package com.smltech.uiux.androiduireference.ui.adapter.recyclerview;
+package com.smltech.uiux.androiduireference.ui.adapter.Recyclerview.Swipe;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;

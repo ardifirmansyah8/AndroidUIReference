@@ -1,4 +1,4 @@
-package com.smltech.uiux.androiduireference.ui.Activity.Toolbar;
+package com.smltech.uiux.androiduireference.ui.Activity.MainMenu;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -33,15 +33,12 @@ public class ToolbarActivity extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btncollapsingToolbar:
-                Intent pilihcollaps= new Intent(this,CollapsingToolbar.class);
-                startActivity(pilihcollaps);
 
                 break;
 
 
             case R.id.btnquickreturn:
-                Intent pilihquick= new Intent(this,CollapsingToolbar.class);
-                startActivity(pilihquick);
+
 
                 break;
 

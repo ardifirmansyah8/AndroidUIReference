@@ -1,4 +1,4 @@
-package com.smltech.uiux.androiduireference.ui.Activity.MaterialTabs;
+package com.smltech.uiux.androiduireference.ui.adapter.MainMenu;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -16,35 +16,38 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
- * Created by Fauziah on 3/3/2017.
+ * Created by ryanzulham on 12/31/16.
  */
 
-public class MaterialTabsAdapter extends RecyclerView.Adapter<MaterialTabsAdapter.MaterialTabsHolder> {
+public class MainMenuAdapter extends RecyclerView.Adapter<MainMenuAdapter.MainMenuHolder>{
+
     private ArrayList<MenuUtamaBean> dataSet;
     private RowCallback rowCallback;
 
-    public MaterialTabsAdapter(ArrayList<MenuUtamaBean> dataSet, RowCallback rowCallback) {
+
+    public MainMenuAdapter(ArrayList<MenuUtamaBean> dataSet, RowCallback rowCallback) {
         this.dataSet = dataSet;
         this.rowCallback = rowCallback;
     }
 
     @Override
-    public MaterialTabsHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.materialtabs_row, parent, false);
-        MaterialTabsHolder holder = new MaterialTabsHolder(itemView);
+    public MainMenuHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_main, parent, false);
+        MainMenuHolder holder = new MainMenuHolder(itemView);
         return holder;
     }
 
+
     @Override
-    public void onBindViewHolder(MaterialTabsHolder holder, final int position) {
-        holder.tvMenuMaterialTabsName.setText(dataSet.get(position).getMenuName());
+    public void onBindViewHolder(MainMenuAdapter.MainMenuHolder holder, final int position) {
+        holder.tvMenuName.setText(dataSet.get(position).getMenuName());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (rowCallback != null) {
+                if (rowCallback != null){
                     rowCallback.onRowClick(dataSet.get(position).getMenuName());
                 }
-
             }
         });
     }
@@ -54,11 +57,11 @@ public class MaterialTabsAdapter extends RecyclerView.Adapter<MaterialTabsAdapte
         return dataSet.size();
     }
 
-    public class MaterialTabsHolder extends RecyclerView.ViewHolder {
-        @Bind(R.id.tvMenuMaterialTabsName)
-        TextView tvMenuMaterialTabsName;
+    public class MainMenuHolder extends RecyclerView.ViewHolder {
+        @Bind(R.id.tvMenuName)
+        TextView tvMenuName;
 
-        public MaterialTabsHolder(View itemView) {
+        public MainMenuHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
         }

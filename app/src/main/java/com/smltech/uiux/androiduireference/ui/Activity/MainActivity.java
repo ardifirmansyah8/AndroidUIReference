@@ -1,24 +1,25 @@
 package com.smltech.uiux.androiduireference.ui.Activity;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
 import com.smltech.uiux.androiduireference.R;
+import com.smltech.uiux.androiduireference.data.DataDumy;
 import com.smltech.uiux.androiduireference.data.bean.MenuUtamaBean;
 import com.smltech.uiux.androiduireference.service.RowCallback;
-import com.smltech.uiux.androiduireference.ui.Activity.MaterialTabs.MaterialTabsActivity;
-import com.smltech.uiux.androiduireference.ui.adapter.recyclerview.MainMenuAdapter;
+import com.smltech.uiux.androiduireference.ui.Activity.MainMenu.MaterialTabsActivity;
+import com.smltech.uiux.androiduireference.ui.Activity.MainMenu.RecyclerViewActivity;
+import com.smltech.uiux.androiduireference.ui.adapter.MainMenu.MainMenuAdapter;
 
 import java.util.ArrayList;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     private MainMenuAdapter adapter;
     private ArrayList<MenuUtamaBean> list;
@@ -48,9 +49,7 @@ public class MainActivity extends AppCompatActivity {
         adapter = new MainMenuAdapter(list, new RowCallback() {
             @Override
             public void onRowClick(String menuName) {
-                Toast.makeText(MainActivity.this, menuName, Toast.LENGTH_SHORT).show();
-
-                switch (menuName) {
+                switch (menuName) {//Toolbar
                     case "RecyclerView":
                         Intent pilihanbutton = new Intent(MainActivity.this,RecyclerViewActivity.class);
                         startActivity(pilihanbutton);
@@ -58,6 +57,8 @@ public class MainActivity extends AppCompatActivity {
                     case "Material Tabs":
                         Intent pilihanbutton1 = new Intent(MainActivity.this, MaterialTabsActivity.class);
                         startActivity(pilihanbutton1);
+                        break;
+                    case "Toolbar":
                         break;
                 }
                 Toast.makeText(MainActivity.this, menuName, Toast.LENGTH_SHORT).show();
@@ -69,8 +70,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void addMenu(){
         list = new ArrayList<MenuUtamaBean>();
-        for (int i = 0; i < DataDumyActivity.mainMenu.length; i++){
-            list.add(new MenuUtamaBean(DataDumyActivity.mainMenu[i]));
+        for (int i = 0; i < DataDumy.mainMenu.length; i++){
+            list.add(new MenuUtamaBean(DataDumy.mainMenu[i]));
         }
     }
 }
