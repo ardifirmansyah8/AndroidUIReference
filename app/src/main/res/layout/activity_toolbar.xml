@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-
-    <Button
-        android:text="Collapsing Toolbar"
+    <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btncollapsingToolbar" />
+        android:id="@+id/toolbardialog">
+    </android.support.v7.widget.Toolbar>
 
-    <Button
-        android:text="Quick Return(Coordinator Layout)"
+    <FrameLayout
+        android:id="@+id/fr_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnquickreturn" />
+        android:layout_height="match_parent">
+    </FrameLayout>
 </LinearLayout>

@@ -10,8 +10,11 @@ import com.smltech.uiux.androiduireference.R;
 import com.smltech.uiux.androiduireference.data.DataDumy;
 import com.smltech.uiux.androiduireference.data.bean.MenuUtamaBean;
 import com.smltech.uiux.androiduireference.service.RowCallback;
+import com.smltech.uiux.androiduireference.ui.Activity.MainMenu.FloatingActionButtonActivity;
+import com.smltech.uiux.androiduireference.ui.Activity.MainMenu.MaterialDialogActivity;
 import com.smltech.uiux.androiduireference.ui.Activity.MainMenu.MaterialTabsActivity;
 import com.smltech.uiux.androiduireference.ui.Activity.MainMenu.RecyclerViewActivity;
+import com.smltech.uiux.androiduireference.ui.Activity.MainMenu.ToolbarActivity;
 import com.smltech.uiux.androiduireference.ui.adapter.MainMenu.MainMenuAdapter;
 
 import java.util.ArrayList;
@@ -49,7 +52,7 @@ public class MainActivity extends BaseActivity {
         adapter = new MainMenuAdapter(list, new RowCallback() {
             @Override
             public void onRowClick(String menuName) {
-                switch (menuName) {//Toolbar
+                switch (menuName) {//ToolbarFragment
                     case "RecyclerView":
                         Intent pilihanbutton = new Intent(MainActivity.this,RecyclerViewActivity.class);
                         startActivity(pilihanbutton);
@@ -59,6 +62,16 @@ public class MainActivity extends BaseActivity {
                         startActivity(pilihanbutton1);
                         break;
                     case "Toolbar":
+                        Intent pilihanbutton2 = new Intent(MainActivity.this, ToolbarActivity.class);
+                        startActivity(pilihanbutton2);
+                        break;
+                    case "Material Dialogs":
+                        Intent pilihanbutton3 = new Intent(MainActivity.this, MaterialDialogActivity.class);
+                        startActivity(pilihanbutton3);
+                        break;
+                    case "Floating Action Button":
+                        Intent pilihanbutton4 = new Intent(MainActivity.this, FloatingActionButtonActivity.class);
+                        startActivity(pilihanbutton4);
                         break;
                 }
                 Toast.makeText(MainActivity.this, menuName, Toast.LENGTH_SHORT).show();

@@ -12,4 +12,6 @@
     <item name="rvCa" type="id" />
     <item name="tvMenuMaterialTabsName" type="id" />
     <item name="rvMaterialTabs" type="id" />
+    <item name="setSupportActionBar" type="id" />
+    <item name="tvMenuCollapsingName" type="id" />
 </resources>

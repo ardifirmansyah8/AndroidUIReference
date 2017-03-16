@@ -1,0 +1,61 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.smltech.uiux.androiduireference.ui.fragment.MaterialDialog">
+
+    <Button
+        android:text="Show Message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/btnshow"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Long Message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnshow"
+        android:layout_alignParentStart="true"
+        android:id="@+id/btnmessage"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Show List"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnmessage"
+        android:layout_alignParentStart="true"
+        android:id="@+id/btnlist"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Show Check Box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnlist"
+        android:layout_alignParentStart="true"
+        android:id="@+id/btncheckbox"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Show Radio Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btncheckbox"
+        android:layout_alignParentStart="true"
+        android:id="@+id/btnradiobutton"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Show Edit Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnradiobutton"
+        android:layout_alignParentStart="true"
+        android:id="@+id/btnedit"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>

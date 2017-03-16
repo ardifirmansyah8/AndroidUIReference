@@ -76,6 +76,26 @@ public class DataDumy {
             " Neufchatel", "Sourire Lozerien", "Queso Para Frier", " Ubriaco", "Avaxtskyr", "Danbo", " Laruns",
             " Monterey Jack Dry", "Waterloo", "Alverca", "Klosterkaese", "Castigliano", "Marbled Cheeses", "Beer Cheeses",
             "Ossau-Iraty", "Naboullsy", "Blue"};
+
+
+    //6 maret 2017
+
+    public static String[] showListNegara = {"Indonesia", "Malaysia", "Singapore", "Thailand",
+            "Jepang", "China", "Australia", "Paris", "Korea", "Amerika"};
+
+
+    //9 Maret 2017
+
+    public static String[] toolbarViewMenu = {"Collapsing ToolbarFragment", "Quick Return (Coordinator Layout"};
+
+    public static String[] collapsingToolbar = {"Android Studio, Android Studio adalah Lingkungan Pengembangan Terpadu - " };
+
+    public static String[] quickReturnToolbar = {"Android Studio, Android Studio adalah Lingkungan Pengembangan Terpadu - "};
+
+    //14 Maret 2017
+
+    public static String[] fabViewMenu = {"FAB Menu", "FAB Download", "FAB Progress", " FAB Loader", "FAB ToolbarFragment", "FAB Reveal"};
+
 }
 
 

@@ -17,11 +17,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.Activity.MainMenu.RecyclerViewActivity"></activity>
+        <activity android:name=".ui.Activity.MainMenu.RecyclerViewActivity" />
         <activity
             android:name=".ui.Activity.MainMenu.MaterialTabsActivity"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name=".ui.Activity.RecyclerViewMenu.RecyclerViewSubMenu"></activity>
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.Activity.RecyclerViewMenu.RecyclerViewSubMenu" />
+        <activity android:name=".ui.Activity.MainMenu.MaterialDialogActivity" />
+        <activity android:name=".ui.Activity.MainMenu.ToolbarActivity" />
+        <activity android:name=".ui.Activity.MainMenu.FabMenu" />
+        <activity android:name=".ui.Activity.MainMenu.FloatingActionButtonActivity"></activity>
     </application>
 
 </manifest>

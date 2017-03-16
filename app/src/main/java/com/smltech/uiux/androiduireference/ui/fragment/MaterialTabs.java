@@ -5,6 +5,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
@@ -12,7 +13,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.smltech.uiux.androiduireference.R;
+import com.smltech.uiux.androiduireference.ui.Activity.BaseActivity;
 import com.smltech.uiux.androiduireference.ui.adapter.MaterialTabs.MaterialTabsAdapter;
+import com.smltech.uiux.androiduireference.ui.adapter.MaterialTabs.MaterialTabsPagerAdapter;
+import com.smltech.uiux.androiduireference.ui.adapter.Toolbar.ToolbarMenuAdapter;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -26,59 +30,44 @@ public class MaterialTabs extends Fragment {
     TabLayout tabMaterialtabs;
     @Bind(R.id.vpMaterialtabs)
     ViewPager vpMaterialtabs;
+
+    public static final String TAG = MaterialTabs.class.getSimpleName();
+    public Object setAdapter;
+    private ToolbarMenuAdapter adapter;
     private LinearLayoutManager layoutManager;
-    private MaterialTabsAdapter adpater;
+
+    public static void showFragment(BaseActivity sourceActivity){
+        if (!sourceActivity.isFragmentNotNull(TAG)){
+            FragmentTransaction fragmentTransaction = sourceActivity.getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.replace(R.id.fr_materialtabs, new MaterialTabs(),TAG).addToBackStack(TAG);
+            fragmentTransaction.commit();
+        }
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.f_materialtabs, container, false);
         ButterKnife.bind(this, view);
-
-        vpMaterialtabs.setAdapter(new MaterialTabs.ViewPagerMaterialtabsAdapter(getFragmentManager()));
-        tabMaterialtabs.setTabTextColors(getResources().getColor(R.color.colorAccent),getResources().getColor(R.color.hijau));
-        tabMaterialtabs.setupWithViewPager(vpMaterialtabs);
+        setupViewPager();
+        setupTabLayout();
         return view;
     }
 
-    public void setLayoutManager(LinearLayoutManager layoutManager) {
+private void setupViewPager() {
+    vpMaterialtabs.setAdapter(new MaterialTabsPagerAdapter(getActivity().getSupportFragmentManager()));
+
+}
+    private void setupTabLayout(){
+tabMaterialtabs.setupWithViewPager(vpMaterialtabs);
+tabMaterialtabs.setTabTextColors(getResources().getColor(R.color.colorAccent), getResources().getColor(R.color.hijau));
+tabMaterialtabs.setupWithViewPager(vpMaterialtabs);
+}
+
+    public void setSetAdapter(ToolbarMenuAdapter adapter){
+        this.adapter = adapter;
+    }
+
+    public void setLayoutManager(LinearLayoutManager layoutManager){
         this.layoutManager = layoutManager;
-    }
-
-    public void setAdpater(MaterialTabsAdapter adpater) {
-        this.adpater = adpater;
-    }
-
-    class ViewPagerMaterialtabsAdapter extends FragmentPagerAdapter {
-        String[] title = new String[]{
-                "Material Tabs"
-        };
-
-        public ViewPagerMaterialtabsAdapter(FragmentManager fm) {
-            super(fm);
-        }
-
-        @Override
-        public Fragment getItem(int position) {
-            Fragment fragment = null;
-            switch (position) {
-                case 0:
-                    fragment = new PageMaterialTab();
-                    break;
-                default:
-                    fragment = null;
-                    break;
-            }
-            return fragment;
-        }
-
-        @Override
-        public CharSequence getPageTitle(int position) {
-            return title[position];
-        }
-
-        @Override
-        public int getCount() {
-            return title.length;
-        }
     }
 }

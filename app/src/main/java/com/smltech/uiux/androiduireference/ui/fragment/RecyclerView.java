@@ -16,6 +16,8 @@ import com.smltech.uiux.androiduireference.R;
 import com.smltech.uiux.androiduireference.ui.Activity.BaseActivity;
 import com.smltech.uiux.androiduireference.ui.adapter.MaterialTabs.MaterialTabsAdapter;
 import com.smltech.uiux.androiduireference.ui.adapter.Recyclerview.RecyclerviewPagerAdapter;
+import com.smltech.uiux.androiduireference.ui.adapter.Toolbar.QuickReturnToolbarMenuAdapter;
+import com.smltech.uiux.androiduireference.ui.adapter.Toolbar.ToolbarMenuAdapter;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -32,6 +34,9 @@ public class RecyclerView extends Fragment {
     ViewPager vpRecyclerview;
 
     public static final String TAG = RecyclerView.class.getSimpleName();
+    public Object setAdapter;
+    private ToolbarMenuAdapter adapter;
+    private LinearLayoutManager layoutManager;
 
     public static void showFragment(BaseActivity sourceActivity) {
         if (!sourceActivity.isFragmentNotNull(TAG)) {
@@ -60,5 +65,14 @@ public class RecyclerView extends Fragment {
         tabRecyclerview.setTabTextColors(getResources().getColor(R.color.colorAccent), getResources().getColor(R.color.hijau));
         tabRecyclerview.setupWithViewPager(vpRecyclerview);
     }
+
+    public void setAdapter(ToolbarMenuAdapter adapter) {
+        this.adapter = adapter;
     }
+
+    public void setLayoutManager(LinearLayoutManager layoutManager) {
+        this.layoutManager = layoutManager;
+
+    }
+}
 

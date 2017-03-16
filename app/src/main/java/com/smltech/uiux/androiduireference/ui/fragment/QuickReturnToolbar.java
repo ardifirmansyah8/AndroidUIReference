@@ -4,18 +4,18 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.smltech.uiux.androiduireference.R;
+import com.smltech.uiux.androiduireference.data.DataDumy;
 import com.smltech.uiux.androiduireference.data.bean.MenuUtamaBean;
 import com.smltech.uiux.androiduireference.service.RowCallback;
-import com.smltech.uiux.androiduireference.data.DataDumy;
 import com.smltech.uiux.androiduireference.ui.Activity.BaseActivity;
-import com.smltech.uiux.androiduireference.ui.adapter.Recyclerview.Swipe.SwipeableMenuAdapter;
+import com.smltech.uiux.androiduireference.ui.adapter.Toolbar.QuickReturnToolbarMenuAdapter;
+import com.smltech.uiux.androiduireference.ui.adapter.Toolbar.ToolbarCollapsingMenuAdapter;
 
 import java.util.ArrayList;
 
@@ -23,67 +23,61 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
- * Created by Fauziah on 2/17/2017.
+ * Created by Fauziah on 3/10/2017.
  */
 
-public class PageSwipeable extends Fragment {
-    private SwipeableMenuAdapter swipeableMenuAdapter;
+public class QuickReturnToolbar extends Fragment {
+
+   /* private QuickReturnToolbarMenuAdapter quickReturnToolbarMenuAdapter;
     private ArrayList<MenuUtamaBean> list;
     private LinearLayoutManager llManager;
-    public static final String TAG = PageSwipeable.class.getSimpleName();
+    public static final String TAG = QuickReturnToolbar.class.getSimpleName();
 
-    @Bind(R.id.rvSwipeable)
-    RecyclerView rvSwipeable;
-
+    @Bind(R.id.rvQuickReturn)
+    ToolbarFragment rvQuickReturn;
 
     public static void showFragment(BaseActivity sourceActivity) {
         if (!sourceActivity.isFragmentNotNull(TAG)) {
             FragmentTransaction fragmentTransaction = sourceActivity.getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fr_recyclerview, new PageSwipeable(), TAG).addToBackStack(TAG);
+            fragmentTransaction.replace(R.id.fr_recyclerview, new QuickReturnToolbar(), TAG).addToBackStack(TAG);
             fragmentTransaction.commit();
         }
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.f_page_swipeable, container, false);
+        View view = inflater.inflate(R.layout.f_page_quickreturn, container, false);
         ButterKnife.bind(this, view);
         addMenu();
-        initRecyclerView();
+        initToolbar();
         loadMenu();
         return view;
-
-
     }
-
-    private void initRecyclerView(){
+    private void initToolbar(){
         llManager = new LinearLayoutManager(this.getContext());
         llManager.setOrientation(LinearLayoutManager.VERTICAL);
-        rvSwipeable.setLayoutManager(llManager);
+        rvQuickReturn.setLayoutManager(llManager);
     }
-
     private void loadMenu(){
-        swipeableMenuAdapter = new SwipeableMenuAdapter(list, new RowCallback() {
+        quickReturnToolbarMenuAdapter = new QuickReturnToolbarMenuAdapter(list, new RowCallback() {
             @Override
-            public void onRowClick(String menuRecyclerView) {
-                Toast.makeText(getContext(), menuRecyclerView, Toast.LENGTH_SHORT).show();
-
-                switch (menuRecyclerView){
-                    case "0 - A":
-                       /* Toast.makeText(getContext(), menuRecyclerView, Toast.LENGTH_SHORT).show();*/
-                        //Intent pilihanbutton = new Intent(getContext(), PageSwipeable.class);
-                        //startActivity(pilihanbutton);
+            public void onRowClick(String menuToolbar) {
+                Toast.makeText(getContext(),menuToolbar, Toast.LENGTH_SHORT).show();
+                switch (menuToolbar){
+                    case "Android Studio, Android Studio adalah Lingkungan Pengembangan Terpadu - ":
                         break;
+
                 }
+
             }
         });
-        rvSwipeable.setAdapter(swipeableMenuAdapter);
+        rvQuickReturn.setAdapter(quickReturnToolbarMenuAdapter);
+        //rvQuickReturn.setAdapter(quickReturnToolbarMenuAdapter);
     }
-
-
-    private void addMenu() {
+    private void addMenu(){
         list = new ArrayList<MenuUtamaBean>();
-        for (int i = 0; i < DataDumy.swipeableViewMenu.length; i++) {
-            list.add(new MenuUtamaBean(DataDumy.swipeableViewMenu[i]));
+        for (int i = 0; i < DataDumy.quickReturnToolbar.length; i++){
+            list.add(new MenuUtamaBean(DataDumy.quickReturnToolbar[i]));
         }
-    }
+    }*/
 }

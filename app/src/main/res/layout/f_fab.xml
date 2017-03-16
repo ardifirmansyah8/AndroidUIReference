@@ -1,0 +1,61 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.smltech.uiux.androiduireference.ui.fragment.MaterialDialog">
+
+    <Button
+        android:text="FAB Menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/btnmenu"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="FAB Download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnmenu"
+        android:layout_alignParentStart="true"
+        android:id="@+id/btndownload"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="FAB Progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btndownload"
+        android:layout_alignParentStart="true"
+        android:id="@+id/btnprogress"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="FAB Loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnprogress"
+        android:layout_alignParentStart="true"
+        android:id="@+id/btnloader"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="FAB Toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnloader"
+        android:layout_alignParentStart="true"
+        android:id="@+id/btntoolbar"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="FAB Reveal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btntoolbar"
+        android:layout_alignParentStart="true"
+        android:id="@+id/btnreveal"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>
