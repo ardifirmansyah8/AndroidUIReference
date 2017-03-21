@@ -87,5 +87,6 @@ public class MainActivity extends BaseActivity {
             list.add(new MenuUtamaBean(DataDumy.mainMenu[i]));
         }
     }
+
 }
 

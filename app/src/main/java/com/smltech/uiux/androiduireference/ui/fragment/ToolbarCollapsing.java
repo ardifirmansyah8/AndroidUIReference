@@ -3,6 +3,7 @@ package com.smltech.uiux.androiduireference.ui.fragment;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -10,6 +11,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.graphics.Palette;
 import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,8 +41,9 @@ public class ToolbarCollapsing extends Fragment {
     private LinearLayoutManager llManager;
     public static final String TAG = ToolbarCollapsing.class.getSimpleName();
 
-
-
+    private CollapsingToolbarLayout collapsingToolbarLayout;
+    @Bind(R.id.anim_toolbar)
+    Toolbar toolbar;
     public static void showFragment(BaseActivity sourceActivity) {
         if (!sourceActivity.isFragmentNotNull(TAG)) {
             FragmentTransaction fragmentTransaction = sourceActivity.getSupportFragmentManager().beginTransaction();
@@ -53,15 +56,11 @@ public class ToolbarCollapsing extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.f_page_collapsing, container, false);
         ButterKnife.bind(this, view);
-        initToolbar();
+        toolbar.setTitle("My Title");
         return view;
     }
 
-    private void initToolbar() {
-        llManager = new LinearLayoutManager(this.getContext());
-        llManager.setOrientation(LinearLayoutManager.VERTICAL);
-        // rvcollapsing.setLayoutManager(llManager);
-    }
+
 /*
     private void loadMenu() {
         toolbarCollapsingMenuAdapter = new ToolbarCollapsingMenuAdapter(list, new RowCallback() {

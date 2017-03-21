@@ -21,6 +21,7 @@ import com.smltech.uiux.androiduireference.ui.fragment.ToolbarFragment;
 import butterknife.ButterKnife;
 
 public class ToolbarActivity extends BaseActivity {
+
     @Override
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
