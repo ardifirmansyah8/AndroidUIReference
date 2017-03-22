@@ -56,7 +56,7 @@ public class ToolbarCollapsing extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.f_page_collapsing, container, false);
         ButterKnife.bind(this, view);
-        toolbar.setTitle("My Title");
+        toolbar.setTitle("Toolbar Collapsing");
         return view;
     }
 

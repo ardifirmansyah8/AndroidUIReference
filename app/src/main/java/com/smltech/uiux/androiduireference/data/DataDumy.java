@@ -10,7 +10,8 @@ public class DataDumy {
             "Toolbar",
             "Material Tabs",
             "Material Dialogs",
-    "Floating Action Button"};
+    "Floating Action Button",
+    "Search View"};
 
     public static String[] recyclerViewMenu = {"SWIPEABLE",
             "SWIPE ON LONG PRESS", "BUTTON UNDER SWIPEABLE ITEM",
@@ -96,6 +97,10 @@ public class DataDumy {
 
     public static String[] fabViewMenu = {"FAB Menu", "FAB Download", "FAB Progress", " FAB Loader", "FAB ToolbarFragment", "FAB Reveal"};
 
+
+    //22 Maret 2017
+
+    public static String [] searchView ={"Default Search", "Themed Search", "Voice Search"};
 }
 
 

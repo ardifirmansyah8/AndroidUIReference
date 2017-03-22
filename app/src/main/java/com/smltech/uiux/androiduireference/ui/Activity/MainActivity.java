@@ -14,6 +14,7 @@ import com.smltech.uiux.androiduireference.ui.Activity.MainMenu.FloatingActionBu
 import com.smltech.uiux.androiduireference.ui.Activity.MainMenu.MaterialDialogActivity;
 import com.smltech.uiux.androiduireference.ui.Activity.MainMenu.MaterialTabsActivity;
 import com.smltech.uiux.androiduireference.ui.Activity.MainMenu.RecyclerViewActivity;
+import com.smltech.uiux.androiduireference.ui.Activity.MainMenu.SearchViewActivity;
 import com.smltech.uiux.androiduireference.ui.Activity.MainMenu.ToolbarActivity;
 import com.smltech.uiux.androiduireference.ui.adapter.MainMenu.MainMenuAdapter;
 
@@ -72,6 +73,10 @@ public class MainActivity extends BaseActivity {
                     case "Floating Action Button":
                         Intent pilihanbutton4 = new Intent(MainActivity.this, FloatingActionButtonActivity.class);
                         startActivity(pilihanbutton4);
+                        break;
+                    case "Search View":
+                        Intent pilihanbutton5 = new Intent(MainActivity.this, SearchViewActivity.class);
+                        startActivity(pilihanbutton5);
                         break;
                 }
                 Toast.makeText(MainActivity.this, menuName, Toast.LENGTH_SHORT).show();
