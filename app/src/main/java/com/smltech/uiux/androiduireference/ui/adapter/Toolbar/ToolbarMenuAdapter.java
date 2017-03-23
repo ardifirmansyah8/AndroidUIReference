@@ -38,7 +38,7 @@ public class ToolbarMenuAdapter extends RecyclerView.Adapter<ToolbarMenuAdapter.
 
     @Override
     public void onBindViewHolder(ToolbarMenuAdapter.ToolbarMenuHolder holder, final int position) {
-        holder.tvMenuSwipeName.setText(dataSet.get(position).getMenuName());
+        holder.tvMenuToolbarName.setText(dataSet.get(position).getMenuName());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -56,8 +56,8 @@ public class ToolbarMenuAdapter extends RecyclerView.Adapter<ToolbarMenuAdapter.
     }
 
     public class ToolbarMenuHolder extends RecyclerView.ViewHolder {
-        @Bind(R.id.tvMenuSwipeName)
-        TextView tvMenuSwipeName;
+        @Bind(R.id.tvMenuToolbarName)
+        TextView tvMenuToolbarName;
 
         public ToolbarMenuHolder(View itemView) {
             super(itemView);

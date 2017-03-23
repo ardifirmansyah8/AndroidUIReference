@@ -16,6 +16,7 @@ import com.smltech.uiux.androiduireference.R;
 import com.smltech.uiux.androiduireference.ui.Activity.BaseActivity;
 import com.smltech.uiux.androiduireference.ui.adapter.MaterialTabs.MaterialTabsAdapter;
 import com.smltech.uiux.androiduireference.ui.adapter.Recyclerview.RecyclerviewPagerAdapter;
+import com.smltech.uiux.androiduireference.ui.adapter.SearchView.SearchViewVoiceMenuAdapter;
 import com.smltech.uiux.androiduireference.ui.adapter.Toolbar.QuickReturnToolbarMenuAdapter;
 import com.smltech.uiux.androiduireference.ui.adapter.Toolbar.ToolbarMenuAdapter;
 
@@ -35,7 +36,7 @@ public class RecyclerView extends Fragment {
 
     public static final String TAG = RecyclerView.class.getSimpleName();
     public Object setAdapter;
-    private ToolbarMenuAdapter adapter;
+    private SearchViewVoiceMenuAdapter adapter;
     private LinearLayoutManager layoutManager;
 
     public static void showFragment(BaseActivity sourceActivity) {
@@ -66,7 +67,7 @@ public class RecyclerView extends Fragment {
         tabRecyclerview.setupWithViewPager(vpRecyclerview);
     }
 
-    public void setAdapter(ToolbarMenuAdapter adapter) {
+    public void setAdapter(SearchViewVoiceMenuAdapter adapter) {
         this.adapter = adapter;
     }
 

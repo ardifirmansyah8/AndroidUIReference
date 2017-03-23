@@ -101,6 +101,13 @@ public class DataDumy {
     //22 Maret 2017
 
     public static String [] searchView ={"Default Search", "Themed Search", "Voice Search"};
+
+
+    //23 Maret 2017
+
+    public static String[] searchVoiceView={"Arul", "Steven", "Jen", "Avenal", "Internet", "Douglas", "Reynholm", "Denholm"};
+    public static String[] searchThemeView={"Arul", "Steven", "Jen", "Avenal", "Internet", "Douglas", "Reynholm", "Denholm"};
+    public static String[] searchDefaultView={"Arul", "Steven", "Jen", "Avenal", "Internet", "Douglas", "Reynholm", "Denholm"};
 }
 
 

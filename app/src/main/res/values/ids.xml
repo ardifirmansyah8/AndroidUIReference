@@ -2,6 +2,7 @@
 <resources>
     <item name="tvMenuSwipeName" type="id" />
     <item name="rvSwipeable" type="id" />
+    <item name="rvVoice" type="id"/>
     <item name="rvSwipeOnLongPress" type="id" />
     <item name="tabRecycleview" type="id" />
     <item name="vpRecycleview" type="id" />

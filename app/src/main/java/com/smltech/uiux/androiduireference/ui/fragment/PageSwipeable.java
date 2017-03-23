@@ -69,9 +69,6 @@ public class PageSwipeable extends Fragment {
 
                 switch (menuRecyclerView){
                     case "0 - A":
-                       /* Toast.makeText(getContext(), menuRecyclerView, Toast.LENGTH_SHORT).show();*/
-                        //Intent pilihanbutton = new Intent(getContext(), PageSwipeable.class);
-                        //startActivity(pilihanbutton);
                         break;
                 }
             }
