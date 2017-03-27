@@ -1,4 +1,4 @@
-package com.smltech.uiux.androiduireference.ui.adapter.SearchView;
+package com.smltech.uiux.androiduireference.ui.adapter.MaterialScrollBar;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -16,26 +16,28 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
- * Created by Fauziah on 3/21/2017.
+ * Created by Fauziah on 3/27/2017.
  */
 
-public class SearchViewDeafultMenuAdapter extends RecyclerView.Adapter<SearchViewDeafultMenuAdapter.SearchViewDefaultMenuHolder> {
+public class MaterialScroolBarMenuAdapter extends RecyclerView.Adapter<MaterialScroolBarMenuAdapter.MaterialScrollBarMenuHolder> {
     private ArrayList<MenuUtamaBean> dataSet;
     private RowCallback rowCallback;
-    public SearchViewDeafultMenuAdapter(ArrayList<MenuUtamaBean> dataSet, RowCallback rowCallback){
+    public MaterialScroolBarMenuAdapter(ArrayList<MenuUtamaBean> dataSet, RowCallback rowCallback) {
         this.dataSet = dataSet;
         this.rowCallback = rowCallback;
+
     }
+
     @Override
-    public SearchViewDefaultMenuHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.rv_default_search_view, parent, false);
-        SearchViewDefaultMenuHolder holder = new SearchViewDefaultMenuHolder(itemView);
+    public MaterialScrollBarMenuHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.rv_material_scroll_bar, parent, false);
+        MaterialScrollBarMenuHolder holder = new MaterialScrollBarMenuHolder(itemView);
         return holder;
     }
 
     @Override
-    public void onBindViewHolder(SearchViewDefaultMenuHolder holder, final int position) {
-        holder.tvMenuDefaultViewName.setText(dataSet.get(position).getMenuName());
+    public void onBindViewHolder(MaterialScrollBarMenuHolder holder, final int position) {
+        holder.tvMenuScrollViewName.setText(dataSet.get(position).getMenuName());
         holder.itemView.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
@@ -44,7 +46,6 @@ public class SearchViewDeafultMenuAdapter extends RecyclerView.Adapter<SearchVie
                 }
             }
         });
-
     }
 
     @Override
@@ -52,10 +53,10 @@ public class SearchViewDeafultMenuAdapter extends RecyclerView.Adapter<SearchVie
         return dataSet.size();
     }
 
-    public class SearchViewDefaultMenuHolder extends RecyclerView.ViewHolder {
-        @Bind(R.id.tvMenuDefaultSearchViewName)
-        TextView tvMenuDefaultViewName;
-        public SearchViewDefaultMenuHolder(View itemView){
+    public class MaterialScrollBarMenuHolder extends RecyclerView.ViewHolder {
+        @Bind(R.id.tvMenuScrollViewName)
+        TextView tvMenuScrollViewName;
+        public MaterialScrollBarMenuHolder(View itemView){
             super(itemView);
             ButterKnife.bind(this, itemView);
         }

@@ -17,7 +17,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
- * Created by Fauziah on 3/23/2017.
+ * Created by Fauziah on 3/21/2017.
  */
 
 public class SearchViewMenuAdapter extends RecyclerView.Adapter<SearchViewMenuAdapter.SearchViewMenuHolder> {

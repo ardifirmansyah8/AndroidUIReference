@@ -12,6 +12,7 @@ import com.smltech.uiux.androiduireference.data.bean.MenuUtamaBean;
 import com.smltech.uiux.androiduireference.service.RowCallback;
 import com.smltech.uiux.androiduireference.ui.Activity.MainMenu.FloatingActionButtonActivity;
 import com.smltech.uiux.androiduireference.ui.Activity.MainMenu.MaterialDialogActivity;
+import com.smltech.uiux.androiduireference.ui.Activity.MainMenu.MaterialScrollBarActivity;
 import com.smltech.uiux.androiduireference.ui.Activity.MainMenu.MaterialTabsActivity;
 import com.smltech.uiux.androiduireference.ui.Activity.MainMenu.RecyclerViewActivity;
 import com.smltech.uiux.androiduireference.ui.Activity.MainMenu.SearchViewActivity;
@@ -74,9 +75,19 @@ public class MainActivity extends BaseActivity {
                         Intent pilihanbutton4 = new Intent(MainActivity.this, FloatingActionButtonActivity.class);
                         startActivity(pilihanbutton4);
                         break;
+
+
+                    // 20 Maret 2017
                     case "Search View":
                         Intent pilihanbutton5 = new Intent(MainActivity.this, SearchViewActivity.class);
                         startActivity(pilihanbutton5);
+                        break;
+
+
+                    //27 Maret 2017
+                    case "Material Scroll Bar":
+                        Intent pilihanbutton6 = new Intent(MainActivity.this, MaterialScrollBarActivity.class);
+                        startActivity(pilihanbutton6);
                         break;
                 }
                 Toast.makeText(MainActivity.this, menuName, Toast.LENGTH_SHORT).show();

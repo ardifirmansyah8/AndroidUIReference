@@ -76,12 +76,15 @@ public class SearchViewVoice extends Fragment {
                     startActivityForResult(intent, RESULT_SPEECH);
                     txtSpeak.setText("");
                 }catch (ActivityNotFoundException a){
-                    Toast.makeText(getContext(), "abc", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Opps! Your device doesn't support Speech to Text", Toast.LENGTH_SHORT).show();
                 }
             }
         });
         return view;
     }
+
+
+
 
     private void initSearchView(){
         llManager = new LinearLayoutManager(this.getContext());

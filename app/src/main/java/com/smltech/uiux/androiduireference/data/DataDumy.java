@@ -11,7 +11,8 @@ public class DataDumy {
             "Material Tabs",
             "Material Dialogs",
     "Floating Action Button",
-    "Search View"};
+    "Search View",
+    "Material Scroll Bar"};
 
     public static String[] recyclerViewMenu = {"SWIPEABLE",
             "SWIPE ON LONG PRESS", "BUTTON UNDER SWIPEABLE ITEM",
@@ -108,6 +109,13 @@ public class DataDumy {
     public static String[] searchVoiceView={"Arul", "Steven", "Jen", "Avenal", "Internet", "Douglas", "Reynholm", "Denholm"};
     public static String[] searchThemeView={"Arul", "Steven", "Jen", "Avenal", "Internet", "Douglas", "Reynholm", "Denholm"};
     public static String[] searchDefaultView={"Arul", "Steven", "Jen", "Avenal", "Internet", "Douglas", "Reynholm", "Denholm"};
+
+
+    //27 Maret 2017
+
+    public  static String[] scrollBar={"Ana", "Bella", "Cica", "Dona", "Eka", "Fauziah", "Gery", "Hanum",
+            "Intan", "Jery", "Kuntum", "Lyla", "Mona", "Nia", "Orin", "Pongky", "Qanita", "Rizka", "Shintya",
+            "Tary", "Uut", "Viona", "Wulan", "Xia", "Youmi", "Zahra"};
 }
 
 

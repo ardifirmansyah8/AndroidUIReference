@@ -9,7 +9,6 @@ import android.widget.TextView;
 import com.smltech.uiux.androiduireference.R;
 import com.smltech.uiux.androiduireference.data.bean.MenuUtamaBean;
 import com.smltech.uiux.androiduireference.service.RowCallback;
-import com.smltech.uiux.androiduireference.ui.fragment.SearchViewVoice;
 
 import java.util.ArrayList;
 
@@ -17,7 +16,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
- * Created by Fauziah on 3/23/2017.
+ * Created by Fauziah on 3/21/2017.
  */
 
 public class SearchViewVoiceMenuAdapter extends RecyclerView.Adapter<SearchViewVoiceMenuAdapter.SearchViewVoiceMenuHolder>{
@@ -30,7 +29,7 @@ public class SearchViewVoiceMenuAdapter extends RecyclerView.Adapter<SearchViewV
     }
     @Override
     public SearchViewVoiceMenuHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.rv_voice_serach_view, parent, false);
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.rv_voice_search_view, parent, false);
         SearchViewVoiceMenuHolder holder = new SearchViewVoiceMenuHolder(itemView);
         return holder;
     }

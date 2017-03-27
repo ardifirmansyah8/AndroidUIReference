@@ -26,7 +26,8 @@
         <activity android:name=".ui.Activity.MainMenu.ToolbarActivity" />
         <activity android:name=".ui.Activity.MainMenu.FabMenu" />
         <activity android:name=".ui.Activity.MainMenu.FloatingActionButtonActivity" />
-        <activity android:name=".ui.Activity.MainMenu.SearchViewActivity"></activity>
+        <activity android:name=".ui.Activity.MainMenu.SearchViewActivity" />
+        <activity android:name=".ui.Activity.MainMenu.MaterialScrollBarActivity"></activity>
     </application>
 
 </manifest>

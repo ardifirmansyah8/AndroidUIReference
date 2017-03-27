@@ -60,7 +60,6 @@ public class SearchView extends Fragment {
             @Override
             public void onClick(View v) {
                 SearchViewVoice.showFragment((BaseActivity)getActivity());
-               // Toast.makeText(this, "Search View", Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -78,9 +77,6 @@ public class SearchView extends Fragment {
                 SearchViewDefault.showFragment((BaseActivity)getActivity());
             }
         });
-
-
-        // Inflate the layout for this fragment
         return view;
     }
 
