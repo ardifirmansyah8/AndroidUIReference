@@ -113,9 +113,12 @@ public class DataDumy {
 
     //27 Maret 2017
 
-    public  static String[] scrollBar={"Ana", "Bella", "Cica", "Dona", "Eka", "Fauziah", "Gery", "Hanum",
-            "Intan", "Jery", "Kuntum", "Lyla", "Mona", "Nia", "Orin", "Pongky", "Qanita", "Rizka", "Shintya",
-            "Tary", "Uut", "Viona", "Wulan", "Xia", "Youmi", "Zahra"};
+    public  static String[] scrollBar={"Ana", "Arul", "Andres", "Arifin", "Aditya", "Arza", "Aufa", "Brian", "Bona", "Bella", "Christoper", "Chichi",
+            "Cica", "Dona", "Dion", "Donald", "Didis", "Daniel", "Dina", "Eka", "Edward", "Ford", "Fuad", "Fauziah", "Fitri", "Gery", "Georgio",
+            "Habib", "Hanum", "Harry", "Irvin", "Intan", "Jery", "James",  "Kenneth", "Kuntum", "Lucas", "Lyla", "Mark", "Mona", "Nick", "Novri",
+            "Nia", "Nilna", "Orlando", "Orin", "Paul", "Pongky", "Pepen",  "Qanita", "Queen", "Robert", "Rizka", "Rizki", "Rezki", "Ronny",
+            "Steven", "Shintya", "Tary", "Thomas", "Triantonio", "Uut", "Usher", "Usman", "Vanessa", "Viona", "William", "Wulan", "Willy",
+            "Windra", "Wilma", "Xman", "Xia", "Yang", "Youmi", "Yogi", "Yozi", "Yuni", "Zahra", "Zoe"};
 }
 
 
