@@ -3,12 +3,10 @@ package com.smltech.uiux.androiduireference.ui.adapter.MaterialTabs;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.view.PagerAdapter;
-import android.view.View;
 
-import com.smltech.uiux.androiduireference.ui.fragment.Category1;
-import com.smltech.uiux.androiduireference.ui.fragment.Category2;
-import com.smltech.uiux.androiduireference.ui.fragment.Category3;
+import com.smltech.uiux.androiduireference.ui.fragment.MaterialTabsCategory1;
+import com.smltech.uiux.androiduireference.ui.fragment.MaterialTabsCategory2;
+import com.smltech.uiux.androiduireference.ui.fragment.MaterialTabsCategory3;
 
 /**
  * Created by Fauziah on 3/14/2017.
@@ -29,13 +27,13 @@ public class MaterialTabsPagerAdapter extends FragmentStatePagerAdapter {
         Fragment fragment = null;
         switch (position) {
             case 0:
-                fragment = new Category1();
+                fragment = new MaterialTabsCategory1();
                 break;
             case 1:
-                fragment = new Category2();
+                fragment = new MaterialTabsCategory2();
                 break;
             case 2:
-                fragment = new Category3();
+                fragment = new MaterialTabsCategory3();
                 break;
             default:
                 fragment = null;

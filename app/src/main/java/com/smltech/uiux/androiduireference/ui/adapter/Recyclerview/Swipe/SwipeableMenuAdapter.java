@@ -29,7 +29,7 @@ public class SwipeableMenuAdapter extends RecyclerView.Adapter<SwipeableMenuAdap
 
     @Override
     public SwipeableMenuHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.rv_row_swipe, parent, false);
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.rv_row_swipe_recyclerview, parent, false);
         SwipeableMenuHolder holder = new SwipeableMenuHolder(itemView);
         return holder;
     }

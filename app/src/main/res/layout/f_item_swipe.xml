@@ -52,7 +52,7 @@
             android:layout_height="match_parent"
             android:background="@android:color/transparent">
 
-            <include layout="@layout/f_card_swipe"/>
+            <include layout="@layout/f_card_swipe_recyclerview"/>
 
         </LinearLayout>
     </com.daimajia.swipe.SwipeLayout>

@@ -1,15 +1,12 @@
 package com.smltech.uiux.androiduireference.ui.Activity.MainMenu;
 
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.smltech.uiux.androiduireference.R;
 import com.smltech.uiux.androiduireference.ui.Activity.BaseActivity;
 import com.smltech.uiux.androiduireference.ui.fragment.FloatingActionButton;
-import com.smltech.uiux.androiduireference.ui.fragment.MaterialDialog;
 
 import butterknife.ButterKnife;
 
@@ -18,7 +15,7 @@ public class FloatingActionButtonActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_floating_action_button);
+        setContentView(R.layout.activity_fab);
         ButterKnife.bind(this);
         initFragment();
     }

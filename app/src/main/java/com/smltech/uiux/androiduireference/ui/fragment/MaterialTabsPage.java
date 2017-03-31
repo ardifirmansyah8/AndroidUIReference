@@ -18,7 +18,7 @@ import butterknife.ButterKnife;
 /**
  * Created by Fauziah on 3/3/2017.
  */
-public class PageMaterialTabs extends Fragment {
+public class MaterialTabsPage extends Fragment {
     private MaterialTabsAdapter materialTabsAdapter;
     private ArrayList<MenuUtamaBean> list;
     private LinearLayoutManager llManager;
@@ -46,7 +46,7 @@ public class PageMaterialTabs extends Fragment {
                 switch (menuRecylerView){
                     case "Laguiole":
                         FragmentTransaction ft =getFragmentManager().beginTransaction();
-                        ft.replace(R.id.fr_materialtabs, new Category1());
+                        ft.replace(R.id.fr_materialtabs, new MaterialTabsCategory1());
                         ft.commit();
                         break;
                 }

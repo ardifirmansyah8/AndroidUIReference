@@ -12,12 +12,9 @@ import com.smltech.uiux.androiduireference.R;
  * Created by Fauziah on 2/14/2017.
  */
 
-public class PageC extends Fragment {
+public class RecyclerViewPageA extends Fragment {
 
-
-
-
-    public PageC(){
+    public RecyclerViewPageA(){
 
     }
 
@@ -28,6 +25,6 @@ public class PageC extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.f_page_c, container, false);
+        return inflater.inflate(R.layout.f_page_a_recyclerview, container, false);
     }
 }

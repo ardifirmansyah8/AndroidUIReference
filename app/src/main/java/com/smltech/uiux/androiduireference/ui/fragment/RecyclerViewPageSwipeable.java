@@ -26,11 +26,11 @@ import butterknife.ButterKnife;
  * Created by Fauziah on 2/17/2017.
  */
 
-public class PageSwipeable extends Fragment {
+public class RecyclerViewPageSwipeable extends Fragment {
     private SwipeableMenuAdapter swipeableMenuAdapter;
     private ArrayList<MenuUtamaBean> list;
     private LinearLayoutManager llManager;
-    public static final String TAG = PageSwipeable.class.getSimpleName();
+    public static final String TAG = RecyclerViewPageSwipeable.class.getSimpleName();
 
     @Bind(R.id.rvSwipeable)
     RecyclerView rvSwipeable;
@@ -39,13 +39,13 @@ public class PageSwipeable extends Fragment {
     public static void showFragment(BaseActivity sourceActivity) {
         if (!sourceActivity.isFragmentNotNull(TAG)) {
             FragmentTransaction fragmentTransaction = sourceActivity.getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fr_recyclerview, new PageSwipeable(), TAG).addToBackStack(TAG);
+            fragmentTransaction.replace(R.id.fr_recyclerview, new RecyclerViewPageSwipeable(), TAG).addToBackStack(TAG);
             fragmentTransaction.commit();
         }
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.f_page_swipeable, container, false);
+        View view = inflater.inflate(R.layout.f_page_swipeable_recyclerview, container, false);
         ButterKnife.bind(this, view);
         addMenu();
         initRecyclerView();

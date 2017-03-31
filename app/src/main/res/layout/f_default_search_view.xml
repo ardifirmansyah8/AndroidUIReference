@@ -5,10 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"><!--
+
     <android.support.v7.widget.Toolbar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-    </android.support.v7.widget.Toolbar>
+    </android.support.v7.widget.Toolbar>-->
+
+        <SearchView
+            android:id="@+id/defaultSearch"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search Here !" />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rvDefault"
@@ -21,4 +33,5 @@
         android:layout_alignParentTop="true">
 
     </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
 </RelativeLayout>

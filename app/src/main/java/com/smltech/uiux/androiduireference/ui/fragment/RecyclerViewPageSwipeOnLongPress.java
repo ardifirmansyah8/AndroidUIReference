@@ -24,7 +24,7 @@ import butterknife.ButterKnife;
  * Created by Fauziah on 2/21/2017.
  */
 
-public class PageSwipeOnLongPress extends Fragment {
+public class RecyclerViewPageSwipeOnLongPress extends Fragment {
     private SwipeOnLongPressMenuAdapter swipeOnLongPressMenuAdapter;
     private ArrayList<MenuUtamaBean> list;
     private LinearLayoutManager llManager;
@@ -35,7 +35,7 @@ public class PageSwipeOnLongPress extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.f_page_swipe_on, container, false);
+        View view = inflater.inflate(R.layout.f_page_swipe_on_recyclerview, container, false);
         ButterKnife.bind(this, view);
         addMenu();
         initRecyclerView();

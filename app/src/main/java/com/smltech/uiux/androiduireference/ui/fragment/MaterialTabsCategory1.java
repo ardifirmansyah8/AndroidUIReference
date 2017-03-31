@@ -5,5 +5,5 @@ import android.support.v4.app.Fragment;
 /**
  * Created by Fauziah on 3/3/2017.
  */
-public class Category1 extends Fragment {
+public class MaterialTabsCategory1 extends Fragment {
 }

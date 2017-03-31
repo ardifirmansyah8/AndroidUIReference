@@ -1,7 +1,6 @@
 package com.smltech.uiux.androiduireference.ui.fragment;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
@@ -27,7 +26,7 @@ import butterknife.ButterKnife;
  * Created by Fauziah on 2/14/2017.
  */
 
-public class PageSwipe extends Fragment {
+public class RecyclerViewPageSwipe extends Fragment {
     private SwipeMenuAdapter swipeMenuAdapter;
     private ArrayList<MenuUtamaBean> list;
     private LinearLayoutManager llManager;
@@ -36,13 +35,13 @@ public class PageSwipe extends Fragment {
     RecyclerView rvSwipe;
 
 
-    public PageSwipe(){
+    public RecyclerViewPageSwipe(){
 
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.f_page_swipe, container, false);
+        View view = inflater.inflate(R.layout.f_page_swipe_recyclerview, container, false);
         ButterKnife.bind(this, view);
         addMenu();
         initRecyclerView();
@@ -73,11 +72,11 @@ public class PageSwipe extends Fragment {
 
                 switch (menuRecyclerView){
                     case "SWIPEABLE":
-                        PageSwipeable.showFragment((BaseActivity) getActivity());
+                        RecyclerViewPageSwipeable.showFragment((BaseActivity) getActivity());
                         break;
                     case "SWIPE ON LONG PRESS":
                         FragmentTransaction FT = getFragmentManager().beginTransaction();
-                        FT.replace(R.id.fr_recyclerview, new PageSwipeOnLongPress());
+                        FT.replace(R.id.fr_recyclerview, new RecyclerViewPageSwipeOnLongPress());
                         FT.commit();
                         break;
                 }

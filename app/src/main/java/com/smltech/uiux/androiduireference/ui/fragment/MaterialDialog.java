@@ -121,9 +121,6 @@ public class MaterialDialog extends Fragment {
             public void onClick(View v) {
                 final ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getContext(),
                         android.R.layout.simple_list_item_1);
-                /*for (int j = 0; j < 10; j++){
-                    arrayAdapter.add(DataDumy.showListNegara[j-1]);
-                }*/
                 int i = 0;
                 while (i <= 9){
                     arrayAdapter.add(DataDumy.showListNegara[i]);

@@ -30,7 +30,7 @@ public class SwipeMenuAdapter extends RecyclerView.Adapter<SwipeMenuAdapter.Swip
 
     @Override
     public SwipeMenuHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.rv_row_swipe, parent, false);
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.rv_row_swipe_recyclerview, parent, false);
         SwipeMenuHolder holder = new SwipeMenuHolder(itemView);
         return holder;
     }

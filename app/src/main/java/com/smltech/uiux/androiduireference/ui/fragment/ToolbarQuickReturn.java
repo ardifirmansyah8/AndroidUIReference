@@ -26,12 +26,12 @@ import butterknife.ButterKnife;
  * Created by Fauziah on 3/10/2017.
  */
 
-public class QuickReturnToolbar extends Fragment {
+public class ToolbarQuickReturn extends Fragment {
 
    /* private QuickReturnToolbarMenuAdapter quickReturnToolbarMenuAdapter;
     private ArrayList<MenuUtamaBean> list;
     private LinearLayoutManager llManager;
-    public static final String TAG = QuickReturnToolbar.class.getSimpleName();
+    public static final String TAG = ToolbarQuickReturn.class.getSimpleName();
 
     @Bind(R.id.rvQuickReturn)
     ToolbarFragment rvQuickReturn;
@@ -39,14 +39,14 @@ public class QuickReturnToolbar extends Fragment {
     public static void showFragment(BaseActivity sourceActivity) {
         if (!sourceActivity.isFragmentNotNull(TAG)) {
             FragmentTransaction fragmentTransaction = sourceActivity.getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fr_recyclerview, new QuickReturnToolbar(), TAG).addToBackStack(TAG);
+            fragmentTransaction.replace(R.id.fr_recyclerview, new ToolbarQuickReturn(), TAG).addToBackStack(TAG);
             fragmentTransaction.commit();
         }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.f_page_quickreturn, container, false);
+        View view = inflater.inflate(R.layout.f_page_quickreturn_toolbar, container, false);
         ButterKnife.bind(this, view);
         addMenu();
         initToolbar();

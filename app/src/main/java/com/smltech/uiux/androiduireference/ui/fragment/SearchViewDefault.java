@@ -33,7 +33,9 @@ public class SearchViewDefault extends Fragment {
     public static final String TAG = SearchViewDefault.class.getSimpleName();
 
     @Bind(R.id.rvDefault)
-    android.support.v7.widget.RecyclerView rvDefault;
+    android.support.v7.widget.RecyclerView rvDefault;/*
+    @Bind(R.id.defaultSearch)
+    SearchView defaultSearch;*/
 
     public static void showFragment(BaseActivity sourceActivity) {
         if (!sourceActivity.isFragmentNotNull(TAG)) {
@@ -52,6 +54,13 @@ public class SearchViewDefault extends Fragment {
         loadMenu();
         return view;
     }
+/*
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);*//*
+        setContentView(R.layout.f_default_search_view);*//*
+    }*/
+
     private void initDeafultView(){
         llManager = new LinearLayoutManager(this.getContext());
         llManager.setOrientation(LinearLayoutManager.VERTICAL);

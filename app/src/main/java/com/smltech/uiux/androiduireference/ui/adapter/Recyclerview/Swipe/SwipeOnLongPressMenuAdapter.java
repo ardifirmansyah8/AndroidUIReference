@@ -30,7 +30,7 @@ public class SwipeOnLongPressMenuAdapter extends RecyclerView.Adapter<SwipeOnLon
 
     @Override
     public SwipeOnLongPressMenuAdapter.SwipeOnLongPressHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.rv_row_swipe_on_long, parent, false);
+        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.rv_row_swipe_on_long_recyclerview, parent, false);
         SwipeOnLongPressMenuAdapter.SwipeOnLongPressHolder holder =
                 new SwipeOnLongPressMenuAdapter.SwipeOnLongPressHolder(itemView);
         return holder;
