@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 
 import com.smltech.uiux.androiduireference.R;
 import com.smltech.uiux.androiduireference.ui.Activity.BaseActivity;
+import com.smltech.uiux.androiduireference.ui.adapter.FloatingActionButton.FabMenuAdapter;
 import com.smltech.uiux.androiduireference.ui.adapter.MaterialTabs.MaterialTabsAdapter;
 import com.smltech.uiux.androiduireference.ui.adapter.Recyclerview.RecyclerviewPagerAdapter;
 import com.smltech.uiux.androiduireference.ui.adapter.SearchView.SearchViewVoiceMenuAdapter;
@@ -36,7 +37,7 @@ public class RecyclerView extends Fragment {
 
     public static final String TAG = RecyclerView.class.getSimpleName();
     public Object setAdapter;
-    private SearchViewVoiceMenuAdapter adapter;
+    private FabMenuAdapter adapter;
     private LinearLayoutManager layoutManager;
 
     public static void showFragment(BaseActivity sourceActivity) {
@@ -67,7 +68,7 @@ public class RecyclerView extends Fragment {
         tabRecyclerview.setupWithViewPager(vpRecyclerview);
     }
 
-    public void setAdapter(SearchViewVoiceMenuAdapter adapter) {
+    public void setAdapter(FabMenuAdapter adapter) {
         this.adapter = adapter;
     }
 

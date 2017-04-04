@@ -30,8 +30,4 @@
         <item name="android:clickable">false</item>
     </style>
 
-    <style name="ThemeOverlay.AppCompat.Dark.ActionBar"></style>
-
-    <style name="ThemeOverlay.AppCompat.Light"></style>
-
 </resources>

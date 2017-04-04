@@ -6,6 +6,8 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewCompat;
+import android.support.v7.widget.CardView;
+import android.support.v7.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +15,13 @@ import android.view.animation.OvershootInterpolator;
 import android.widget.Button;
 
 import com.smltech.uiux.androiduireference.R;
+import com.smltech.uiux.androiduireference.data.bean.MenuUtamaBean;
 import com.smltech.uiux.androiduireference.ui.Activity.BaseActivity;
+import com.smltech.uiux.androiduireference.ui.adapter.FloatingActionButton.FabMenuAdapter;
+import com.smltech.uiux.androiduireference.ui.adapter.FloatingActionButton.FloatingActionButtonMenuAdapter;
+import com.smltech.uiux.androiduireference.ui.adapter.MaterialScrollBar.MaterialScroolBarMenuAdapter;
+
+import java.util.ArrayList;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -23,25 +31,28 @@ import butterknife.ButterKnife;
  */
 
 public class FloatingActionButton extends Fragment {
-    @Bind(R.id.btnmenu)
-    Button btnmenu;
-    @Bind(R.id.btndownload)
-    Button btndownload;
-    @Bind(R.id.btnprogress)
-    Button btnprogress;
-    @Bind(R.id.btnloader)
-    Button btnloader;
-    @Bind(R.id.btntoolbar)
-    Button btntoolbar;
-    @Bind(R.id.btnreveal)
-    Button btnreveal;
+    @Bind(R.id.cvFabMenu)
+    CardView cvMenu;
+    @Bind(R.id.cvFabDownload)
+    CardView cvDownload;
+    @Bind(R.id.cvFabProgress)
+    CardView cvProgress;
+    @Bind(R.id.cvFabLoader)
+    CardView cvLoader;
+    @Bind(R.id.cvFabToolbar)
+    CardView cvToolbar;
+    @Bind(R.id.cvFabReveal)
+    CardView cvReveal;
 
+    private FloatingActionButtonMenuAdapter floatingActionButtonMenuAdapter;
+    private ArrayList<MenuUtamaBean> list;
+    private LinearLayoutManager llManager;
     public static final String TAG = FloatingActionButton.class.getSimpleName();
 
     public static void showFragment(BaseActivity sourceActivity){
         if (!sourceActivity.isFragmentNotNull(TAG)){
             FragmentTransaction fragmentTransaction = sourceActivity.getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fr_fab, new FloatingActionButton(), TAG).addToBackStack(TAG);
+            fragmentTransaction.replace(R.id.fr_fab, new FloatingActionButton(),TAG).addToBackStack(TAG);
             fragmentTransaction.commit();
         }
     }
@@ -50,20 +61,18 @@ public class FloatingActionButton extends Fragment {
 
     }
 
+    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.f_fab, container, false);
         ButterKnife.bind(this, view);
-        fabMenu();
-    return view;
+        cvMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FabMenu.showFragment((BaseActivity) getActivity());
+            }
+        });
+        return view;
     }
 
-   private void fabMenu() {
-       btnmenu.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               final com.github.clans.fab.FloatingActionButton fFloatingActionButton = new com.github.clans.fab.FloatingActionButton(getActivity());
-           }
-       });
-   }
-   }
+}

@@ -97,6 +97,7 @@ public class DataDumy {
     //14 Maret 2017
 
     public static String[] fabViewMenu = {"FAB Menu", "FAB Download", "FAB Progress", " FAB Loader", "FAB ToolbarFragment", "FAB Reveal"};
+    public static String[] fabMenu = {"Press the FAB to experiance the FAB Menu!"};
 
 
     //22 Maret 2017
