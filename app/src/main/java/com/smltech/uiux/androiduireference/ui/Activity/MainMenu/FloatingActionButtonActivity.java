@@ -6,6 +6,7 @@ import android.view.MenuItem;
 
 import com.smltech.uiux.androiduireference.R;
 import com.smltech.uiux.androiduireference.ui.Activity.BaseActivity;
+import com.smltech.uiux.androiduireference.ui.fragment.FabToolbar;
 import com.smltech.uiux.androiduireference.ui.fragment.FloatingActionButton;
 
 import butterknife.ButterKnife;
@@ -23,6 +24,7 @@ public class FloatingActionButtonActivity extends BaseActivity {
         FloatingActionButton.showFragment(this);
        // MaterialDialog.showFragment(this);
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
